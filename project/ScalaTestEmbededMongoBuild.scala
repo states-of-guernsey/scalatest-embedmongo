@@ -6,10 +6,10 @@ object ScalaTestEmbededMongoBuild extends Build {
   lazy val root = Project(id = "simplyscala-server", base = file("."),
     settings = Defaults.coreDefaultSettings ++ Seq(
       name := "scalatest-embedmongo",
-      organization := "com.github.simplyscala",
-      description := "API to use embeded mongoDb database for testing in Scala",
+      organization := "gg.gov.revenue",
+      description := "API to use embedded mongoDb database for testing in Scala",
 
-      version := "0.2.5-SNAPSHOT",
+      version := "0.2.5",
 
       scalaVersion := "2.13.1",
 
@@ -25,50 +25,7 @@ object ScalaTestEmbededMongoBuild extends Build {
 
       publishMavenStyle := true,
       publishArtifact in Test := false,
-      pomIncludeRepository := { _ => false },
-
-      pomExtra in Global := {
-        <url>https://github.com/SimplyScala/scalatest-embedmongo</url>
-          <licenses>
-            <license>
-              <name>GPLv3</name>
-              <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
-              <distribution>repo</distribution>
-            </license>
-          </licenses>
-          <scm>
-            <url>git@github.com:SimplyScala/scalatest-embedmongo.git</url>
-            <connection>scm:git:git@github.com:SimplyScala/scalatest-embedmongo.git</connection>
-          </scm>
-          <developers>
-            <developer>
-              <id>ugobourdon</id>
-              <name>bourdon.ugo@gmail.com</name>
-              <url>https://github.com/ubourdon</url>
-            </developer>
-	          <developer>
-		          <id>tg44</id>
-		          <name>tg44</name>
-		          <url>https://github.com/tg44</url>
-	          </developer>
-          </developers>
-      },
-
-	    /**
-	      * how to publish
-	      * ______________
-	      *
-	      * https://github.com/xerial/sbt-sonatype
-	      * http://www.scala-sbt.org/sbt-pgp/usage.html
-	      * http://www.loftinspace.com.au/blog/publishing-scala-libraries-to-sonatype.html#install_pgp_plugin
-	      * http://blog.sonatype.com/2010/01/how-to-generate-pgp-signatures-with-maven/
-	      */
-
-      publishTo <<= version { v: String =>
-        val nexus = "https://oss.sonatype.org/"
-        if(v.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
-        else Some("releases" at nexus + "service/local/staging/deploy/maven2")
-      }
+      pomIncludeRepository := { _ => false }
     )
-  )
+  ).enablePlugins(LibraryReleasePlugin)
 }
