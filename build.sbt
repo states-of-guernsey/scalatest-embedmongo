@@ -24,7 +24,7 @@ val root = Project(appName, file("."))
     ),
 
     parallelExecution := false,
-
+    publishConfiguration := publishConfiguration.value.withOverwrite(true),
     publishMavenStyle := true,
     publishArtifact in Test := false,
     pomIncludeRepository := { _ => false }
