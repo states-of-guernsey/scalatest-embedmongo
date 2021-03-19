@@ -15,8 +15,6 @@ val root = Project(appName, file("."))
 
     scalaVersion := "2.13.1",
 
-    crossScalaVersions := Seq("2.12.9", "2.13.1"),
-
     libraryDependencies ++= Seq(
       "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.2.0",
       "org.scalatest" %% "scalatest" % "3.0.8" % "test",
