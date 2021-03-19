@@ -23,6 +23,10 @@ val root = Project(appName, file("."))
       "org.mongodb.scala" %% "mongo-scala-driver" % "2.7.0" % "test"
     ),
 
+    dependencyOverrides ++= Seq(
+      "org.apache.commons" % "commons-compress" % "1.19"
+    ),
+
     parallelExecution := false,
 
     publishMavenStyle := true,
