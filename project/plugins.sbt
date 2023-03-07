@@ -1,4 +1,4 @@
-resolvers += "Artifactory" at "https://artifactory.non-prod.g-rockers.equalexperts.io/artifactory/scala"
+resolvers += "Artifactory" at "https://artifactory-tooling.non-prod.g-rockers.equalexperts.io/artifactory/scala"
 
 addSbtPlugin("gg.gov.revenue" % "sbt-release" % "7.5.0")
 
