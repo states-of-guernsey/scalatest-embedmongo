@@ -14,7 +14,7 @@ val root = Project(appName, file("."))
     scalaVersion := "2.12.10",
 
     libraryDependencies ++= Seq(
-      "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "3.1.4",
+      "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "4.6.1",
       "org.scalatest" %% "scalatest" % "3.0.8" % "test",
       "org.mongodb.scala" %% "mongo-scala-driver" % "2.7.0" % "test"
     ),
