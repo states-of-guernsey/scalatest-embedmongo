@@ -8,4 +8,12 @@
     <cve>CVE-2020-8908</cve>
   </suppress>
 
+  <suppress>
+    <notes><![CDATA[
+   file name: commons-compress-1.22.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.commons/commons\-compress@.*$</packageUrl>
+    <cve>CVE-2021-37533</cve>
+  </suppress>
+
 </suppressions>
