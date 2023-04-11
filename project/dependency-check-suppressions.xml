@@ -22,6 +22,12 @@
    ]]></notes>
    <packageUrl regex="true">^pkg:maven/de\.flapdoodle\.embed/de\.flapdoodle\.embed\.mongo@.*$</packageUrl>
    <cve>CVE-2012-6619</cve>
+   <cve>CVE-2013-1892</cve>
+   <cve>CVE-2013-2132</cve>
+   <cve>CVE-2014-8180</cve>
+   <cve>CVE-2015-1609</cve>
+   <cve>CVE-2016-6494</cve>
+   <cve>CVE-2021-32036</cve>
   </suppress>
 
 </suppressions>
