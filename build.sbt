@@ -10,7 +10,7 @@ val root = Project(appName, file("."))
     name:= appName,
     organization := "gg.gov.revenue",
     description := "API to use embedded mongoDb database for testing in Scala",
-
+    resolvers += Resolver.jcenterRepo,
     scalaVersion := "2.13.10",
 
     libraryDependencies ++= Seq(
