@@ -11,10 +11,10 @@ val root = Project(appName, file("."))
     organization := "gg.gov.revenue",
     description := "API to use embedded mongoDb database for testing in Scala",
 
-    scalaVersion := "2.13.1",
+    scalaVersion := "2.12.10",
 
     libraryDependencies ++= Seq(
-      "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "4.6.1",
+      "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.2.0",
       "org.scalatest" %% "scalatest" % "3.0.8" % "test",
       "org.mongodb.scala" %% "mongo-scala-driver" % "2.7.0" % "test"
     ),
