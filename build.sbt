@@ -3,10 +3,6 @@ import sbt.Keys.{libraryDependencies, organization}
 
 val appName = "scalatest-embedmongo"
 
-fork := true
-javaOptions ++= Seq(
-  "-Dhttps.protocols=TLSv1.1,TLSv1.2",
-)
 
 val root = Project(appName, file("."))
   .enablePlugins(LibraryReleasePlugin)
@@ -16,6 +12,10 @@ val root = Project(appName, file("."))
     description := "API to use embedded mongoDb database for testing in Scala",
     resolvers += Resolver.jcenterRepo,
     scalaVersion := "2.12.10",
+    fork := true,
+    javaOptions ++= Seq(
+    "-Dhttps.protocols=TLSv1.1,TLSv1.2",
+    ),
 
     libraryDependencies ++= Seq(
       "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.2.0",
