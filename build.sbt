@@ -3,6 +3,9 @@ import sbt.Keys.{libraryDependencies, organization}
 
 val appName = "scalatest-embedmongo"
 
+javaOptions ++= Seq(
+  "-Dhttps.protocols=TLSv1.1,TLSv1.2",
+)
 
 val root = Project(appName, file("."))
   .enablePlugins(LibraryReleasePlugin)
